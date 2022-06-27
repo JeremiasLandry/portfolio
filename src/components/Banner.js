@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import headerImg from '../assets/img/header-img.svg';
+import headerImg from '../assets/img/man_working.svg';
 
 
 const Banner = () => {
@@ -47,12 +47,12 @@ const Banner = () => {
             <Row className='align-items-center'>
                 <Col xs={12} md={6} xl={7}>
                     <span>Bienvenidos a mi Portfolio</span>
-                    <h1>{`Hola, soy Jeremias. `}<span className='wrap'>{text}</span></h1>
-                    <p>Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-                    <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
+                    <h1>{`>Hola, soy Jeremías. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
+                    <p>Soy un desarrollador web proveniente de Argentina. Realice varios proyectos por mi cuenta y para una Institucion Educativa. Algunos de esos proyectos pueden verse en la sección 'Proyectos' que se encuentra mas abajo.</p>
+                    <button onClick={() => console.log('connect')}>Conectemos!<ArrowRightCircle size={25}/></button>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
-                    <img src={headerImg} alt='Header Img'/>
+                    {/* <img src={headerImg} alt='Header Img'/> */}
                 </Col>
             </Row>
         </Container>
