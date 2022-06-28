@@ -333,13 +333,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  background-color: #000 !important;
+  background-image: url('./assets/img/code-wall.jpg') !important;
+  background-size: cover;
+ 
 }
+
 .skill-bx {
-  background: #151515;
-  border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
+  background: rgba(21, 21, 21, 0.33);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+  border: 1px solid rgba(21, 21, 21, 0.14);
 }
 .skill h2 {
 	font-size: 45px;
@@ -356,10 +365,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 80%;
   margin: 0 auto;
   position: relative;
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start !important;
+  height: 100%;
+}
+.skill-slider .item{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between !important;
+  align-items: center;
+  align-content: center;
+  margin: auto auto;
+  height: 100%;
 }
 .skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
+  width: 40%;
+  margin: auto auto;
 }
 .background-image-left {
   top: 28%;
@@ -367,13 +390,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
+  background-color: #AA367C;
 }
 
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-image: url('./assets/img/code-wall2.jpg');
+  background-size: cover;
 }
 .project h2 {
 	font-size: 45px;

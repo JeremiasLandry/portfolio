@@ -1,11 +1,18 @@
 import React from 'react';
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import react from "../assets/img/react.svg";
+import javascript from "../assets/img/javascript.svg";
+import html5 from "../assets/img/html5.svg";
+import bootstrap from "../assets/img/bootstrap.svg";
+import sass from "../assets/img/sass.svg";
+import jquery from "../assets/img/jquery.svg";
+import css from "../assets/img/css3.svg";
+import git from "../assets/img/git.svg";
+import firebase from "../assets/img/firebase.svg";
 import { Container, Row, Col} from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/wallpaper.png";
+
 
 
 const Skills = () => {
@@ -36,32 +43,52 @@ const Skills = () => {
                 <Col>
                     <div className='skill-bx wow zoomIn'>
                         <h2>
-                            Skills
+                            Tecnologías
                         </h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>Estas son muchas de las diferentes Tecnologías que estan en mi conocimiento, y que se encuentran en los Proyectos que realice.</p>
                         <Carousel responsive={responsive} infinite={true} className='owl-carousel owl-theme skill-slider'>
                             <div className='item'>
-                                <img src={meter1} alt='Image'/>
+                                <img src={javascript} alt='Image'/>
                                 <h5>JavaScript</h5>
                             </div>
                             <div className='item'>
-                                <img src={meter2} alt='Image'/>
+                                <img src={react} alt='Image'/>
                                 <h5>React</h5>
                             </div>
                             <div className='item'>
-                                <img src={meter3} alt='Image'/>
+                                <img src={html5} alt='Image'/>
+                                <h5>HTML5</h5>
+                            </div>
+                            <div className='item'>
+                                <img src={bootstrap} alt='Image'/>
+                                <h5>Bootstrap</h5>
+                            </div>
+                            <div className='item'>
+                                <img src={jquery} alt='Image'/>
+                                <h5>JQuery</h5>
+                            </div>
+                            <div className='item'>
+                                <img src={sass} alt='Image'/>
+                                <h5>SASS</h5>
+                            </div>
+                            <div className='item'>
+                                <img src={css} alt='Image'/>
                                 <h5>CSS3</h5>
                             </div>
                             <div className='item'>
-                                <img src={meter1} alt='Image'/>
-                                <h5>Bootstrap</h5>
+                                <img src={git} alt='Image'/>
+                                <h5>Git</h5>
+                            </div>
+                            <div className='item'>
+                                <img src={firebase} alt='Image'/>
+                                <h5>Firebase</h5>
                             </div>
                         </Carousel>
                     </div>
                 </Col>
             </Row>
         </Container>
-      <img className='background-image-left' src={colorSharp} />
+      <img className='background-image-left' src={colorSharp} alt='background'/>
     </section>
   )
 }

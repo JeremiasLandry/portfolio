@@ -83,7 +83,7 @@ const Projects = () => {
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                         </Tab.Pane>
                         <Tab.Pane eventKey="third">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                        <p>Loremopo ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                         </Tab.Pane>
                     </Tab.Content>
                     </Tab.Container>
@@ -92,7 +92,7 @@ const Projects = () => {
                 </Col>
             </Row>
         </Container>
-        <img className="background-image-right" src={colorSharp2}></img>
+        {/* <img className="background-image-right" src={colorSharp2}></img> */}
     </section>
   )
 }
