@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/img/logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -30,6 +30,9 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" className={scrolled ? 'scrolled': ''}>
         <Container>
+            <Navbar.Brand href="/">
+                <img id='nv-logo' src={logo} alt="Logo" />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav">
                 <span className='navbar-toggler-icon'></span>
             </Navbar.Toggle>
@@ -37,7 +40,7 @@ const NavBar = () => {
             <Nav className="me-auto">
                 <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Inicio</Nav.Link>
                 <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Tecnologías</Nav.Link>
-                <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Proyectos</Nav.Link>
+                <Nav.Link href="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Proyectos</Nav.Link>
             </Nav>
             <span className='navbar-text'>
                 <div className='social-icon'>

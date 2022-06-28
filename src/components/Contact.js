@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Row, Col} from 'react-bootstrap';
-import contactImg from '../assets/img/contact-img.svg'
+import contactImg from '../assets/img/email.svg'
 
 const Contact = () => {
   const formInitialDetails = {
@@ -12,7 +12,7 @@ const Contact = () => {
   }
 
   const [formDetails,setFormDetails] = useState(formInitialDetails); //this will update the object 'formInitialDetails' - JJ
-  const [buttonText, setButtonText] = useState('send'); //this is the button text, when user press submit, this has to change to 'sending...' - JJ
+  const [buttonText, setButtonText] = useState('Enviar'); //this is the button text, when user press submit, this has to change to 'sending...' - JJ
   const [status, setStatus] = useState({}); //this is the status of the post method, 400 or 200 depending of the succes of the call. - JJ
 
   const onFormUpdate = (category, value) => {
@@ -50,19 +50,19 @@ const Contact = () => {
                     <img src={contactImg} alt='Contact Us'/>
                 </Col>
                 <Col md={6}>
-                    <h2>Contactame</h2>
+                    <h2 style={{textAlign: 'center'}}>Contactame</h2>
                     <form onSubmit={handleSubmit}>
                         <Row>
-                            <Col sm={6} className='px-1'>
+                            <Col sm={6} className='px-3'>
                                 <input type='text' value={formDetails.nombre} placeholder='Nombre' onChange={(e)=> onFormUpdate('nombre', e.target.value)}/>
                             </Col>
-                            <Col sm={6} className='px-1'>
+                            <Col sm={6} className='px-3'>
                                 <input type='text' value={formDetails.apellido} placeholder='Apellido' onChange={(e)=> onFormUpdate('apellido', e.target.value)}/>
                             </Col>
-                            <Col sm={6} className='px-1'>
+                            <Col sm={6} className='px-3'>
                                 <input type='email' value={formDetails.email} placeholder='Email' onChange={(e)=> onFormUpdate('email', e.target.value)}/>
                             </Col>
-                            <Col sm={6} className='px-1'>
+                            <Col sm={6} className='px-3'>
                                 <input type='tel' value={formDetails.telefono} placeholder='Telefono' onChange={(e)=> onFormUpdate('telefono', e.target.value)}/>
                             </Col>
                             <Col>
