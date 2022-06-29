@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Container, Row, Col} from 'react-bootstrap';
-import contactImg from '../assets/img/email.svg'
+import contactImg from '../assets/img/email.svg';
+import { db } from '../firebase/config';
+import { collection, addDoc, Timestamp} from 'firebase/firestore';
 
 const Contact = () => {
   const formInitialDetails = {
@@ -13,7 +15,14 @@ const Contact = () => {
 
   const [formDetails,setFormDetails] = useState(formInitialDetails); //this will update the object 'formInitialDetails' - JJ
   const [buttonText, setButtonText] = useState('Enviar'); //this is the button text, when user press submit, this has to change to 'sending...' - JJ
-  const [status, setStatus] = useState({}); //this is the status of the post method, 400 or 200 depending of the succes of the call. - JJ
+  const [status, setStatus] = useState({});
+  const [errorMessage,setErrorMessage] = useState({
+    empty: false,
+    wrongTel:false,
+    minChar:false,
+    maxChar:false
+  });
+  const [errorWarning,setErrorWarning] = useState('')
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -21,24 +30,76 @@ const Contact = () => {
         [category]: value
     })
   }
- 
-  const handleSubmit = async (e) => {
+  
+  const handleInputChange= (e) => {
+    if (e.target.name === 'telefono'){
+      setFormDetails({
+            ...formDetails,
+            ['telefono']:  parseInt(e.target.value)
+        })
+    }else{
+      setFormDetails({
+            ...formDetails,
+            [e.target.name]: e.target.value
+        })
+    }
+  }
+
+  function isInt(value) {
+    var x;
+    return isNaN(value) ? !1 : (x = parseFloat(value), (0 | x) === x);
+  }
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setButtonText("Enviando...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
+    setErrorMessage({
+      empty: false,
+      wrongTel:false,
+      minChar:false,
+      maxChar:false
     });
-    setButtonText("Enviar");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Mensaje enviado con exito.'});
-    } else {
-      setStatus({ succes: false, message: 'Algo salió mal, intentalo mas tarde.'});
+
+    if(formDetails.nombre === '' || formDetails.apellido === '' || formDetails.email === '' || formDetails.telefono === '' || formDetails.mensaje === ''){
+      setErrorMessage({
+          ...errorMessage,
+          empty: true
+      })
+      setErrorWarning('Asegurate de no dejar campos vacíos.')
+    }else if (!isInt(formDetails.telefono)){
+        setErrorMessage({
+            ...errorMessage,
+            wrongTel:true
+        })
+        setErrorWarning("Asegurate de introducir números en el campo 'Telefono'")
+    }else if(formDetails.mensaje.length < 25){
+        setErrorMessage({
+            ...errorMessage,
+            minChar:true
+        })
+        setErrorWarning('Asegurate de introducir al menos 25 caracteres.')
+    }else if(formDetails.mensaje.length > 2000){
+        setErrorMessage({
+            ...errorMessage,
+            maxChar:true
+        })
+        setErrorWarning('Asegurate de introducir 2000 caracteres como máximo.')
+    }else{
+        setErrorWarning('')
+        setButtonText("Enviando...");
+        const consulta = {
+        detalles: {...formDetails},
+        fyh: Timestamp.fromDate(new Date())
+        }
+
+        const consultasRef= collection(db, 'consultas')
+
+        addDoc(consultasRef, consulta)
+        .then((doc) => {
+          setStatus('sent')
+          setButtonText("Enviar");
+        })
+
+        setFormDetails(formInitialDetails);
     }
   }
 
@@ -68,13 +129,11 @@ const Contact = () => {
                             <Col>
                                 <textarea row='6' value={formDetails.mensaje} placeholder='Mensaje' onChange={(e)=> onFormUpdate('mensaje', e.target.value)}></textarea> 
                                 <button type='submit'><span>{buttonText}</span></button>
+                                {
+                                 <p className='py-3'>{errorWarning}</p>
+                                }
                             </Col>
-                            {
-                                status.message &&
-                                <Col>
-                                    <p className={status.success === false ? 'danger' : 'success'}>{status.message}</p>
-                                </Col>
-                            }
+                            
                         </Row>
                     </form>
                 </Col>
