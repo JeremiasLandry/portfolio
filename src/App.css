@@ -64,7 +64,7 @@ button {
   background-color: transparent;
 }
 
-input: focus, textarea:focus, select:focus {
+input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
@@ -276,6 +276,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 15px;
   text-shadow: 0 0 5px #C8C8C8;
   position: relative;
+}
+.welcome-text{
+  border:2px solid #fff;
+  border-radius: 8px;
+  padding: 8px;
+  
 }
 #terminalSquare{
   background-color: #fff;

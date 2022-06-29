@@ -44,17 +44,14 @@ const NavBar = () => {
             </Nav>
             <span className='navbar-text'>
                 <div className='social-icon'>
-                    <a href='#'>
+                    <a href='https://www.linkedin.com/in/jerem%C3%ADas-landry-0b66891a4' target='_blank'>
                         <img src={navIcon1} alt=''></img>
                     </a>
-                    <a href='#'>
+                    <a href='https://github.com/JeremiasLandry' target='_blank'>
                         <img src={navIcon4} alt=''></img>
                     </a>
-                    <a href='#'>
-                        <img src={navIcon3} alt=''></img>
-                    </a>
                 </div>
-                <button className='vvd' onClick={()=> console.log('connect')}><span>Conectemos!</span></button>
+                <a href='#connect'><button className='vvd' onClick={()=> console.log('connect')}><span>Conectemos!</span></button></a>
             </span>
             </Navbar.Collapse>
         </Container>

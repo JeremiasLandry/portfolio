@@ -46,10 +46,10 @@ const Banner = () => {
         <Container>
             <Row className='align-items-center'>
                 <Col xs={12} md={6} xl={7}>
-                    <span>Bienvenidos a mi Portfolio</span>
+                    <span className='welcome-text'>Bienvenidos a mi Portfolio</span>
                     <h1>{`>Hola!, soy Jeremías. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
-                    <p>Soy un desarrollador web proveniente de Argentina. Realice varios proyectos por mi cuenta y para una Institucion Educativa. Algunos de esos proyectos pueden verse en la sección 'Proyectos' que se encuentra mas abajo.</p>
-                    <button onClick={() => console.log('connect')}>Conectemos!<ArrowRightCircle size={25}/></button>
+                    <p>Soy un desarrollador web proveniente de Argentina. Realice varios proyectos por mi cuenta y para una Institucion Educativa. Algunos de esos proyectos pueden verse en la sección <a style={{textDecoration:'underline',color:'#fff'}} href='#project'>Proyectos</a></p>
+                    <a href='#connect'><button onClick={() => console.log('connect')}>Conectemos!<ArrowRightCircle size={25}/></button></a>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
                     {/* <img src={headerImg} alt='Header Img'/> */}
