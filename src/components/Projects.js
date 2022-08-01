@@ -18,13 +18,13 @@ const Projects = () => {
     },
     {
       title: "CHARDLE",
-      description: "CLON DEL JUEGO WORDLE PERO CON TEMATICA ORIENTADA A PERSONAJES FICTICIOS. (HTML, CSS, JavaScript, React.js)",
+      description: "GUESS THE FICTIONAL CHARACTER GAME (HTML, CSS, JavaScript, React.js)",
       imgUrl: projImg2,
       siteUrl:'https://chardle.vercel.app'
     },
     {
       title: "EE",
-      description: "CREA EXPEDIENTES DE USUARIOS CON SU INFORMACION ESPECIFICA Y ARCHIVALOS O ELIMINALOS (HTML, CSS, JavaScript, JQuery, Bootstrap)",
+      description: "STORE STUDENTS RECORDS AND KEEP TRACK ON THEM (HTML, CSS, JavaScript, JQuery, Bootstrap)",
       imgUrl: projImg3,
       siteUrl:'https://jeremiaslandry.github.io/Proyecto-Coderhouse/'
     }
@@ -38,8 +38,8 @@ const Projects = () => {
                     <TrackVisibility>
                 {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                    <h2>Proyectos</h2>
-                    <p id='project-description'>Estos son algunos de los proyectos que realice en este ultimo año. En la descripción se pueden encontrar las diferentes tecnologías usadas para el desarrollo de estas paginas web.</p>
+                    <h2>Projects</h2>
+                    <p id='project-description'>These are some of the projects I have made last year. In the description you can find the different technologies used for the development of these websites.</p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                         <Tab.Pane eventKey="first">

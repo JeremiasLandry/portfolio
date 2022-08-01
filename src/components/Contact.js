@@ -14,7 +14,7 @@ const Contact = () => {
   }
 
   const [formDetails,setFormDetails] = useState(formInitialDetails); //this will update the object 'formInitialDetails' - JJ
-  const [buttonText, setButtonText] = useState('Enviar'); //this is the button text, when user press submit, this has to change to 'sending...' - JJ
+  const [buttonText, setButtonText] = useState('Send'); //this is the button text, when user press submit, this has to change to 'sending...' - JJ
   const [status, setStatus] = useState({});
   const [errorMessage,setErrorMessage] = useState({
     empty: false,
@@ -64,28 +64,28 @@ const Contact = () => {
           ...errorMessage,
           empty: true
       })
-      setErrorWarning('Asegurate de no dejar campos vacíos.')
+      setErrorWarning("Make sure you don't leave empty fields.")
     }else if (!isInt(formDetails.telefono)){
         setErrorMessage({
             ...errorMessage,
             wrongTel:true
         })
-        setErrorWarning("Asegurate de introducir números en el campo 'Telefono'")
+        setErrorWarning("Make sure to put numbers in the 'Phone' field")
     }else if(formDetails.mensaje.length < 25){
         setErrorMessage({
             ...errorMessage,
             minChar:true
         })
-        setErrorWarning('Asegurate de introducir al menos 25 caracteres.')
+        setErrorWarning('Make sure you put at least 25 characters.')
     }else if(formDetails.mensaje.length > 2000){
         setErrorMessage({
             ...errorMessage,
             maxChar:true
         })
-        setErrorWarning('Asegurate de introducir 2000 caracteres como máximo.')
+        setErrorWarning('Make sure you enter 2000 characters maximum.')
     }else{
         setErrorWarning('')
-        setButtonText("Enviando...");
+        setButtonText("Sending...");
         const consulta = {
         detalles: {...formDetails},
         fyh: Timestamp.fromDate(new Date())
@@ -96,7 +96,7 @@ const Contact = () => {
         addDoc(consultasRef, consulta)
         .then((doc) => {
           setStatus('sent')
-          setButtonText("Enviar");
+          setButtonText("Send");
         })
 
         setFormDetails(formInitialDetails);
@@ -111,23 +111,23 @@ const Contact = () => {
                     <img src={contactImg} alt='Contact Us'/>
                 </Col>
                 <Col md={6}>
-                    <h2 style={{textAlign: 'center'}}>Contactame</h2>
+                    <h2 style={{textAlign: 'center'}}>Contact me</h2>
                     <form onSubmit={handleSubmit}>
                         <Row>
                             <Col sm={6} className='px-3'>
-                                <input type='text' value={formDetails.nombre} placeholder='Nombre' onChange={(e)=> onFormUpdate('nombre', e.target.value)}/>
+                                <input type='text' value={formDetails.nombre} placeholder='Name' onChange={(e)=> onFormUpdate('nombre', e.target.value)}/>
                             </Col>
                             <Col sm={6} className='px-3'>
-                                <input type='text' value={formDetails.apellido} placeholder='Apellido' onChange={(e)=> onFormUpdate('apellido', e.target.value)}/>
+                                <input type='text' value={formDetails.apellido} placeholder='Last Name' onChange={(e)=> onFormUpdate('apellido', e.target.value)}/>
                             </Col>
                             <Col sm={6} className='px-3'>
                                 <input type='email' value={formDetails.email} placeholder='Email' onChange={(e)=> onFormUpdate('email', e.target.value)}/>
                             </Col>
                             <Col sm={6} className='px-3'>
-                                <input type='tel' value={formDetails.telefono} placeholder='Telefono' onChange={(e)=> onFormUpdate('telefono', e.target.value)}/>
+                                <input type='tel' value={formDetails.telefono} placeholder='Phone' onChange={(e)=> onFormUpdate('telefono', e.target.value)}/>
                             </Col>
                             <Col>
-                                <textarea row='6' value={formDetails.mensaje} placeholder='Mensaje' onChange={(e)=> onFormUpdate('mensaje', e.target.value)}></textarea> 
+                                <textarea row='6' value={formDetails.mensaje} placeholder='Message' onChange={(e)=> onFormUpdate('mensaje', e.target.value)}></textarea> 
                                 <button type='submit'><span>{buttonText}</span></button>
                                 {
                                  <p className='py-3'>{errorWarning}</p>

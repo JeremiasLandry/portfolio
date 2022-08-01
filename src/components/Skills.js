@@ -7,11 +7,14 @@ import sass from "../assets/img/sass.svg";
 import jquery from "../assets/img/jquery.svg";
 import css from "../assets/img/css3.svg";
 import git from "../assets/img/git.svg";
+import storybook from "../assets/img/storybook.svg";
+import styledcomponents from "../assets/img/styled-components.svg";
 import firebase from "../assets/img/firebase.svg";
 import { Container, Row, Col} from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/wallpaper.png";
+
 
 
 
@@ -43,9 +46,9 @@ const Skills = () => {
                 <Col>
                     <div className='skill-bx wow zoomIn'>
                         <h2>
-                            Tecnologías
+                            Technologies
                         </h2>
-                        <p>Estas son muchas de las diferentes Tecnologías que estan en mi conocimiento, y que se encuentran en los Proyectos que realice.</p>
+                        <p>These are the different technologies and tools that are in my knowledge and that are part of the projects that I made</p>
                         <Carousel responsive={responsive} infinite={true} className='owl-carousel owl-theme skill-slider'>
                             <div className='item'>
                                 <img src={javascript} alt='Image'/>
@@ -74,6 +77,14 @@ const Skills = () => {
                             <div className='item'>
                                 <img src={css} alt='Image'/>
                                 <h5>CSS3</h5>
+                            </div>
+                            <div className='item'>
+                                <img src={storybook} alt='Image'/>
+                                <h5>Storybook</h5>
+                            </div>
+                            <div className='item'>
+                                <img src={styledcomponents} alt='Image'/>
+                                <h5>Styled Components</h5>
                             </div>
                             <div className='item'>
                                 <img src={git} alt='Image'/>

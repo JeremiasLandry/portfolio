@@ -1,7 +1,6 @@
 import React,{ useState, useEffect } from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import headerImg from '../assets/img/man_working.svg';
 
 
 const Banner = () => {
@@ -46,10 +45,10 @@ const Banner = () => {
         <Container>
             <Row className='align-items-center'>
                 <Col xs={12} md={6} xl={7}>
-                    <span className='welcome-text'>Bienvenidos a mi Portfolio</span>
-                    <h1>{`>Hola!, soy Jeremías. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
-                    <p>Soy un desarrollador web proveniente de Argentina. Realice varios proyectos por mi cuenta y para una Institucion Educativa. Algunos de esos proyectos pueden verse en la sección <a style={{textDecoration:'underline',color:'#fff'}} href='#project'>Proyectos</a></p>
-                    <a href='#connect'><button onClick={() => console.log('connect')}>Conectemos!<ArrowRightCircle size={25}/></button></a>
+                    <span className='welcome-text'>Welcome to my portfolio!</span>
+                    <h1>{`>Hi!, I'm Jeremias. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
+                    <p>I'm a Front end developer from Argentina. I did projects on my own and for an educational institution. Some of these projects can be seen in the section <a style={{textDecoration:'underline',color:'#fff'}} href='#project'>Projects</a></p>
+                    <a href='#connect'><button onClick={() => console.log('connect')}>Let's connect!<ArrowRightCircle size={25}/></button></a>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
                     {/* <img src={headerImg} alt='Header Img'/> */}

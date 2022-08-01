@@ -4,6 +4,7 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import navIcon4 from '../assets/img/github.svg'
+import twitter from '../assets/img/twitter.svg'
 
 const Footer = () => {
   return (
@@ -17,6 +18,7 @@ const Footer = () => {
             <div className="social-icon px-3">
               <a href='https://www.linkedin.com/in/jerem%C3%ADas-landry-0b66891a4' target='_blank'><img src={navIcon1} alt="Icon" /></a>
               <a href='https://github.com/JeremiasLandry' target='_blank'><img src={navIcon4} alt="Icon" /></a>
+              <a href='https://twitter.com/LandryJeremias' target='_blank'><img src={twitter} alt="Icon" /></a>
             </div>
             <p>Copyright 2022. All Rights Reserved</p>
           </Col>

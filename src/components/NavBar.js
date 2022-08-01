@@ -5,6 +5,7 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/github.svg'
+import twitter from '../assets/img/twitter.svg'
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -38,9 +39,9 @@ const NavBar = () => {
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Inicio</Nav.Link>
-                <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Tecnologías</Nav.Link>
-                <Nav.Link href="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Proyectos</Nav.Link>
+                <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+                <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Technologies</Nav.Link>
+                <Nav.Link href="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
             </Nav>
             <span className='navbar-text'>
                 <div className='social-icon'>
@@ -50,8 +51,11 @@ const NavBar = () => {
                     <a href='https://github.com/JeremiasLandry' target='_blank'>
                         <img src={navIcon4} alt=''></img>
                     </a>
+                    <a href='https://twitter.com/LandryJeremias' target='_blank'>
+                        <img src={twitter} alt=''></img>
+                    </a>
                 </div>
-                <a href='#connect'><button className='vvd' onClick={()=> console.log('connect')}><span>Conectemos!</span></button></a>
+                <a href='#connect'><button className='vvd' onClick={()=> console.log('connect')}><span>Let's connect</span></button></a>
             </span>
             </Navbar.Collapse>
         </Container>
