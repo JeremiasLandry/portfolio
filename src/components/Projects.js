@@ -2,7 +2,8 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import projImg1 from "../assets/img/punchline-card.jpg";
 import projImg2 from "../assets/img/chardle-card.jpg";
-import projImg3 from "../assets/img/ee-card.jpg";
+import projImg3 from "../assets/img/g4gcard.jpg";
+import projImg4 from '../assets/img/puntoitaliacard.jpg'
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -23,10 +24,16 @@ const Projects = () => {
       siteUrl:'https://chardle.vercel.app'
     },
     {
-      title: "EE",
-      description: "STORE STUDENTS RECORDS AND KEEP TRACK ON THEM (HTML, CSS, JavaScript, JQuery, Bootstrap)",
+      title: "g4g games",
+      description: "E-COMMERCE (HTML, CSS, Bootstrap, JavaScript, React.js, Firebase)",
       imgUrl: projImg3,
-      siteUrl:'https://jeremiaslandry.github.io/Proyecto-Coderhouse/'
+      siteUrl:'https://g4g.vercel.app'
+    },
+    {
+      title: "Punto Italia",
+      description: "Landing Page for italian restaurant (HTML, CSS, JavaScript, SASS, Bootstrap)",
+      imgUrl: projImg4,
+      siteUrl:'https://jeremiaslandry.github.io/Punto-Italia-2/'
     }
   ];
 
