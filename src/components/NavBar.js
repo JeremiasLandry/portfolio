@@ -6,6 +6,7 @@ import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/github.svg'
 import twitter from '../assets/img/twitter.svg'
+import navIcon5 from '../assets/img/whatsapp.svg'
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -50,6 +51,9 @@ const NavBar = () => {
                     </a>
                     <a href='https://github.com/JeremiasLandry' target='_blank'>
                         <img src={navIcon4} alt=''></img>
+                    </a>
+                    <a href='https://twitter.com/LandryJeremias' target='_blank'>
+                        <img src={twitter} alt=''></img>
                     </a>
                     <a href='https://twitter.com/LandryJeremias' target='_blank'>
                         <img src={twitter} alt=''></img>

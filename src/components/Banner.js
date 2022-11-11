@@ -46,7 +46,7 @@ const Banner = () => {
             <Row className='align-items-center'>
                 <Col xs={12} md={6} xl={7}>
                     <span className='welcome-text'>Welcome to my portfolio!</span>
-                    <h1>{`>Hi!, I'm Jeremias. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
+                    <h1>{`>Hi!, I'm Landry. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
                     <p>I'm a Front end developer from Argentina. I did projects on my own and for an educational institution. Some of these projects can be seen in the section <a style={{textDecoration:'underline',color:'#fff'}} href='#project'>Projects</a></p>
                     <a href='#connect'><button onClick={() => console.log('connect')}>Let's connect!<ArrowRightCircle size={25}/></button></a>
                 </Col>

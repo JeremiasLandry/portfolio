@@ -3,7 +3,9 @@ import ProjectCard from "./ProjectCard";
 import projImg1 from "../assets/img/punchline-card.jpg";
 import projImg2 from "../assets/img/chardle-card.jpg";
 import projImg3 from "../assets/img/g4gcard.jpg";
-import projImg4 from '../assets/img/puntoitaliacard.jpg'
+import projImg4 from '../assets/img/puntoitaliacard.jpg';
+import projImg5 from '../assets/img/landsycard.jpg';
+import projImg6 from '../assets/img/gtg-card.jpg'
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -34,6 +36,18 @@ const Projects = () => {
       description: "Landing Page for italian restaurant (HTML, CSS, JavaScript, SASS, Bootstrap)",
       imgUrl: projImg4,
       siteUrl:'https://jeremiaslandry.github.io/Punto-Italia-2/'
+    },
+    {
+      title: "Landsy",
+      description: "Landing Page for development services (HTML, CSS, JavaScript, Bootstrap, JQuery)",
+      imgUrl: projImg5,
+      siteUrl:'https://landsy.vercel.app'
+    },
+    {
+      title: "Guess this game",
+      description: "GUESS THE GAME BY LOOKING PICTURES OF IT (HTML, CSS, JavaScript, React, Styled Components)",
+      imgUrl: projImg6,
+      siteUrl:'https://guessthisgame.vercel.app'
     }
   ];
 

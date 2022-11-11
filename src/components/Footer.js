@@ -20,6 +20,7 @@ const Footer = () => {
               <a href='https://github.com/JeremiasLandry' target='_blank'><img src={navIcon4} alt="Icon" /></a>
               <a href='https://twitter.com/LandryJeremias' target='_blank'><img src={twitter} alt="Icon" /></a>
             </div>
+            <p>(+54 11 2557 2060)</p>
             <p>Copyright 2022. All Rights Reserved</p>
           </Col>
         </Row>
