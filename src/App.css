@@ -32,8 +32,12 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background-image: url('./assets/img/background.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff !important;
+  width: 100%;
   font-family: 'Centra', sans-serif !important;
 }
 
@@ -103,7 +107,10 @@ nav.navbar {
 /* let's connect button end */
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background: rgba( 0, 0, 0, 0.55 );
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+
 }
 nav.navbar a.navbar-brand {
     width: 9%;
@@ -245,12 +252,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+  flex-direction: column;
   margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: url('./assets/img/background1.jpg');
-  background-position: top center;
+  padding: 0 0 150px 0;
+  /* background-image: url('./assets/img/background2.jpg'); */
+  background-color: transparent;
+  /* background-position: top center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  min-height:100vh;
 }
 .banner .tagline {
   font-weight: 700;
@@ -268,7 +282,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   border-radius: 10px;
   letter-spacing: 0.8px;
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 20px;
   margin-top: 20px;
   display: block;
@@ -277,11 +291,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-shadow: 0 0 5px #C8C8C8;
   position: relative;
 }
+.consoleMessage{
+  background-color: #000;
+  min-height: 225px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding: 0 20px;
+  border:2px solid #fff;
+}
 .welcome-text{
   border:2px solid #fff;
   border-radius: 8px;
   padding: 8px;
-  
+  color: #000;
+  background-color: #fff;
+
 }
 #terminalSquare{
   background-color: #fff;
@@ -323,7 +348,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 25px;
 }
 .banner img {
-  animation: updown 3s linear infinite;
+  /* animation: updown 3s linear infinite; */
+  max-height: 70px;
+  max-width: 70px;
+  padding-right:0;
+  margin-right:0;
+  border-radius:11px;
+}
+.pfpMessage{
+  background-color: #fff;
+  display: flex;
+  padding: 5px;
+  width: fit-content;
+  border-radius: 11px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.pfpMessage span{
+  padding:0 20px;
+  font-size: 1.2em;
 }
 @keyframes updown {
     0% {
@@ -344,9 +390,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
-  background-color: #000 !important;
-  background-image: url('./assets/img/code-wall2.jpg') !important;
-  background-size: cover;
+  background-color:transparent;
+  /* background-image: url('./assets/img/code-wall3.jpg') !important;
+  background-size: cover; */
  
 }
 
@@ -354,12 +400,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
-  background: rgba(21, 21, 21, 0.33);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.3px);
-  -webkit-backdrop-filter: blur(5.3px);
-  border: 1px solid rgba(21, 21, 21, 0.14);
+  background: rgba( 0, 0, 0, 0.55 );
+
+backdrop-filter: blur( 6.5px );
+-webkit-backdrop-filter: blur( 6.5px );
+border-radius: 10px;
 }
 .skill h2 {
 	font-size: 45px;
@@ -408,9 +453,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-image: url('./assets/img/code-wall.jpg');
-  background-size: cover;
-  
 }
 .project h2 {
 	font-size: 45px;
@@ -541,16 +583,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background-image: url('./assets/img/code-wall.jpg');
+  background-color:transparent;
+  /* background-image: url('./assets/img/code-wall.jpg'); */
   padding: 60px 0 200px 0;
 }
 .contact form{
-  background: rgba(21, 21, 21, 0.33);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.3px);
-  -webkit-backdrop-filter: blur(5.3px);
-  border: 1px solid rgba(21, 21, 21, 0.14);
+  background: rgba( 0, 0, 0, 0.55 );
+
+backdrop-filter: blur( 6.5px );
+-webkit-backdrop-filter: blur( 6.5px );
+border-radius: 12px;
   padding: 50px;
 }
 .contact img {
@@ -650,7 +692,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0  !important;
 }
 .footer-container{
-  background:#121212;;
+  background:#000000;;
   padding: 50px;
   width: 100%;
   height: 100%;

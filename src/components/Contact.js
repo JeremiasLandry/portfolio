@@ -108,7 +108,7 @@ const Contact = () => {
         <Container>
             <Row className='align-items-center'>
                 <Col md={6}>
-                    <img src={contactImg} alt='Contact Us'/>
+                    {/* <img src={contactImg} alt='Contact Us'/> */}
                 </Col>
                 <Col md={6}>
                     <h2 style={{textAlign: 'center'}}>Contact me</h2>

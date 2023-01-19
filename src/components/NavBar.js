@@ -55,9 +55,6 @@ const NavBar = () => {
                     <a href='https://twitter.com/LandryJeremias' target='_blank'>
                         <img src={twitter} alt=''></img>
                     </a>
-                    <a href='https://twitter.com/LandryJeremias' target='_blank'>
-                        <img src={twitter} alt=''></img>
-                    </a>
                 </div>
                 <a href='#connect'><button className='vvd' onClick={()=> console.log('connect')}><span>Let's connect</span></button></a>
             </span>

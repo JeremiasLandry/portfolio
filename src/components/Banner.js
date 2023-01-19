@@ -1,7 +1,8 @@
 import React,{ useState, useEffect } from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-
+import pfp from '../assets/img/pfp.png';
+import bannerPic from '../assets/img/bannerPic.jpg'
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0); //index of loop that iterates the words
@@ -10,7 +11,7 @@ const Banner = () => {
   const [text, setText] = useState(''); //This will indicate the current character that is getting written on screen, example: 'w' then 'e' then 'b' for the word 'web'.
   const [delta, setDelta] = useState(300 - Math.random() * 100); //how fast one letter writes after the other.
   const period = 2000; //This indicate the time that passes between each word in the list.
-
+  
   useEffect(()=>{
     let ticker = setInterval(()=>{
         tick();                          //This will help to make the deletion faster than the typing. because that's how works in real life.
@@ -45,13 +46,18 @@ const Banner = () => {
         <Container>
             <Row className='align-items-center'>
                 <Col xs={12} md={6} xl={7}>
-                    <span className='welcome-text'>Welcome to my portfolio!</span>
-                    <h1>{`>Hi!, I'm Landry. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
+                    <div className='pfpMessage'>
+                        <span className='welcome-text'>Welcome to my portfolio!</span>
+                        <img src={pfp} alt='Myself'/>
+                    </div>
+                    <div className='consoleMessage'>
+                        <h1>{`>Hi!, I'm Landry. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
+                    </div>
                     <p>I'm a Front end developer from Argentina. I did projects on my own and for an educational institution. Some of these projects can be seen in the section <a style={{textDecoration:'underline',color:'#fff'}} href='#project'>Projects</a></p>
                     <a href='#connect'><button onClick={() => console.log('connect')}>Let's connect!<ArrowRightCircle size={25}/></button></a>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
-                    {/* <img src={headerImg} alt='Header Img'/> */}
+                    {/* <img src={bannerPic} alt='Banner Img'/> */}
                 </Col>
             </Row>
         </Container>
