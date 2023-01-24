@@ -14,6 +14,7 @@
 	src: url('./assets/font/CentraNo2-Book.ttf');
 	font-weight: 400;
 }
+@font-face {font-family: "PexicoMicro-Regular"; src: url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot"); src: url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff") format("woff"), url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.svg#PexicoMicro-Regular") format("svg"); }
 
 
 /************ Default Css ************/
@@ -38,7 +39,7 @@ body {
   background-repeat: no-repeat;
   color: #fff !important;
   width: 100%;
-  font-family: 'Centra', sans-serif !important;
+  font-family: "PexicoMicro-Regular", 'Centra', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -277,8 +278,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 }
 .banner h1 {
-  font-family:  Inconsolata, monospace;
-  font-size: 50px;
+  font-family: "PexicoMicro-Regular", 'Centra', sans-serif !important;
+  font-size: 40px;
   font-weight: 700;
   border-radius: 10px;
   letter-spacing: 0.8px;
@@ -299,6 +300,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 30px;
   padding: 0 20px;
   border:2px solid #fff;
+  font-family: "PexicoMicro-Regular" !important;
 }
 .welcome-text{
   border:2px solid #fff;
@@ -313,6 +315,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   text-shadow:none;
   animation: blinking .6s infinite;
+  
 }
 @keyframes blinking {
   0%{
@@ -385,7 +388,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
-
+.LottieContainer{
+  padding-left:100px;
+  padding-bottom:50px;
+}
+@media screen and (max-width:768px){
+  .banner{
+    min-height:170vh;
+  }
+  .left-section{
+    min-height: 70vh;
+  }
+  .LottieContainer{
+    min-height: 300px;
+    padding-left:0;
+    padding-bottom:0;
+  }
+}
+@media screen and (max-width:580px) {
+  .LottieContainer{
+    padding-left:0;
+    padding-bottom:0;
+  }
+}
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;

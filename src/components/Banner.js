@@ -2,7 +2,9 @@ import React,{ useState, useEffect } from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import pfp from '../assets/img/pfp.png';
-import bannerPic from '../assets/img/bannerPic.jpg'
+import FileSaver from 'file-saver';
+import cv from '../resources/JeremiasLandryCV_2023.pdf';
+import SpacemanGif from './LottieCoder';
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0); //index of loop that iterates the words
@@ -11,7 +13,14 @@ const Banner = () => {
   const [text, setText] = useState(''); //This will indicate the current character that is getting written on screen, example: 'w' then 'e' then 'b' for the word 'web'.
   const [delta, setDelta] = useState(300 - Math.random() * 100); //how fast one letter writes after the other.
   const period = 2000; //This indicate the time that passes between each word in the list.
-  
+
+  const saveFile = () => {
+    FileSaver.saveAs(
+      process.env.PUBLIC_URL + cv,
+      "MyCV.pdf"
+    );
+  }
+
   useEffect(()=>{
     let ticker = setInterval(()=>{
         tick();                          //This will help to make the deletion faster than the typing. because that's how works in real life.
@@ -45,7 +54,7 @@ const Banner = () => {
     <section className='banner' id='home'>
         <Container>
             <Row className='align-items-center'>
-                <Col xs={12} md={6} xl={7}>
+                <Col xs={12} md={6} xl={7} className='left-section'>
                     <div className='pfpMessage'>
                         <span className='welcome-text'>Welcome to my portfolio!</span>
                         <img src={pfp} alt='Myself'/>
@@ -54,10 +63,10 @@ const Banner = () => {
                         <h1>{`>Hi!, I'm Landry. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
                     </div>
                     <p>I'm a Front end developer from Argentina. I did projects on my own and for an educational institution. Some of these projects can be seen in the section <a style={{textDecoration:'underline',color:'#fff'}} href='#project'>Projects</a></p>
-                    <a href='#connect'><button onClick={() => console.log('connect')}>Let's connect!<ArrowRightCircle size={25}/></button></a>
+                    <button onClick={() => saveFile()}>Download CV<ArrowRightCircle size={25}/></button>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
-                    {/* <img src={bannerPic} alt='Banner Img'/> */}
+                    <SpacemanGif/>
                 </Col>
             </Row>
         </Container>
