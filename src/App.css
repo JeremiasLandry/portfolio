@@ -394,23 +394,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 @media screen and (max-width:768px){
   .banner{
-    min-height:170vh;
+    min-height:600px;
+    padding-top: 150px;
+    margin-bottom:0;
+    padding-bottom:50px;
   }
   .left-section{
-    min-height: 70vh;
+    min-height: 100%;
+    margin-bottom:50px;
   }
   .LottieContainer{
-    min-height: 300px;
+    min-height:100%;
     padding-left:0;
     padding-bottom:0;
   }
-}
-@media screen and (max-width:580px) {
-  .LottieContainer{
-    padding-left:0;
-    padding-bottom:0;
+  .consoleMessage{
+    min-height: 320px;
+  }
+  .banner button{
+    margin-top: 25px;
+  }
+  #skills h2, #project h2, #connect h2{
+    font-size: 2em;
   }
 }
+
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
