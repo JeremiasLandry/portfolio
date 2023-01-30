@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Container, Row, Col} from 'react-bootstrap';
-import contactImg from '../assets/img/email.svg';
 import { db } from '../firebase/config';
 import { collection, addDoc, Timestamp} from 'firebase/firestore';
 
@@ -106,12 +105,9 @@ const Contact = () => {
   return (
     <section className='contact' id='connect'> {/*the ID attribute is to identify the differents sections of the web, so the navbar can use it to travel fast to it.*/}
         <Container>
-            <Row className='align-items-center'>
-                <Col md={6}>
-                    {/* <img src={contactImg} alt='Contact Us'/> */}
-                </Col>
-                <Col md={6}>
-                    <h2 style={{textAlign: 'center'}}>Contact me</h2>
+            <h2 style={{textAlign: 'center'}}>Contact me</h2>
+            <Row className='align-items-center justify-content-center align-content-center'>
+                <Col md={12}>
                     <form onSubmit={handleSubmit}>
                         <Row>
                             <Col sm={6} className='px-3'>

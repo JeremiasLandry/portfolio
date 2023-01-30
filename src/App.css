@@ -622,11 +622,13 @@ border-radius: 10px;
 }
 .contact form{
   background: rgba( 0, 0, 0, 0.55 );
-
-backdrop-filter: blur( 6.5px );
--webkit-backdrop-filter: blur( 6.5px );
-border-radius: 12px;
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border-radius: 12px;
   padding: 50px;
+  max-width:500px;
+  align-self: center;
+  margin:auto auto;
 }
 .contact img {
   width: 92%;
