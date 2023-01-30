@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import { Container, Row, Col} from 'react-bootstrap';
 import { db } from '../firebase/config';
 import { collection, addDoc, Timestamp} from 'firebase/firestore';
+import navIcon1 from '../assets/img/nav-icon1.svg'
+import navIcon4 from '../assets/img/github.svg'
+import twitter from '../assets/img/twitter.svg'
+
 
 const Contact = () => {
   const formInitialDetails = {
@@ -131,6 +135,15 @@ const Contact = () => {
                             </Col>
                             
                         </Row>
+                        <div className='d-flex justify-content-center flex-column'>
+                          <p>Get in touch through my social media</p>
+                          <div className="social-icon px-3">
+                            <a href='https://www.linkedin.com/in/jerem%C3%ADas-landry-0b66891a4' target='_blank'><img src={navIcon1} alt="Icon" /></a>
+                            <a href='https://github.com/JeremiasLandry' target='_blank'><img src={navIcon4} alt="Icon" /></a>
+                            <a href='https://twitter.com/LandryJeremias' target='_blank'><img src={twitter} alt="Icon" /></a>
+                          </div>
+                          <small>(+54 11 2557 2060)</small>
+                        </div>
                     </form>
                 </Col>
             </Row>
