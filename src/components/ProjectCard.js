@@ -10,7 +10,8 @@ const ProjectCard = ({ title, description, imgUrl, siteUrl}) => {
                     <h4>{title}</h4>
                     <span>{description}</span>
                     <br/>
-                    <span><a href={siteUrl} target='_blank' id='pageLink'>Go to this website.</a></span>
+                    <br/>
+                    <span id='projectLink'><a href={siteUrl} target='_blank' rel="noreferrer" id='pageLink'>Go to this website.</a></span>
                 </div>
         </div>
     </Col>

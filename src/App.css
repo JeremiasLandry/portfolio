@@ -506,7 +506,7 @@ border-radius: 10px;
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
-  border-radius: 50px;
+  border-radius: 10px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
@@ -532,7 +532,7 @@ border-radius: 10px;
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #0C8384 -5.91%, #083F4B 111.58%);
+    background: linear-gradient(90.21deg, #23084F -5.91%, #360e77 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -558,13 +558,13 @@ border-radius: 10px;
 }
 .proj-imgbx {
   position: relative;
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
   margin-bottom: 24px;
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #0C8384 -5.91%, #083F4B 111.58%);
+  background: linear-gradient(90.21deg, #23084F -5.91%, #360e77 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -583,6 +583,8 @@ border-radius: 10px;
   transition: 0.5s ease-in-out;
   opacity: 0;
   width: 100%;
+  padding: 0 20px;
+  margin-top: 10px;
 }
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
@@ -593,12 +595,16 @@ border-radius: 10px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
+  margin-bottom: 15px;
 }
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
+}
+#projectLink{
+  padding-top: 20px !important;
 }
 .background-image-right {
   top: 20%;

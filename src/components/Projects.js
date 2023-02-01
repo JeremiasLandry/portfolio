@@ -15,37 +15,37 @@ const Projects = () => {
   const projects = [
     {
       title: "PUNCHLINE",
-      description: "E-COMMERCE (HTML, CSS, JavaScript, Bootstrap, React.js, Firebase)",
+      description: "E-COMMERCE (JS, Bootstrap, ReactJS, Firebase)",
       imgUrl: projImg1,
       siteUrl:'https://punchline-one.vercel.app'
     },
     {
       title: "CHARDLE",
-      description: "GUESS THE FICTIONAL CHARACTER GAME (HTML, CSS, JavaScript, React.js)",
+      description: "GUESS THE FICTIONAL CHARACTER GAME (JavaScript, ReactJS)",
       imgUrl: projImg2,
       siteUrl:'https://chardle.vercel.app'
     },
     {
       title: "g4g games",
-      description: "E-COMMERCE (HTML, CSS, Bootstrap, JavaScript, React.js, Firebase)",
+      description: "E-COMMERCE (Bootstrap, JS, ReactJS, Firebase)",
       imgUrl: projImg3,
       siteUrl:'https://g4g.vercel.app'
     },
     {
       title: "Punto Italia",
-      description: "Landing Page for italian restaurant (HTML, CSS, JavaScript, SASS, Bootstrap)",
+      description: "Landing Page for italian restaurant (JavaScript, SASS, Bootstrap)",
       imgUrl: projImg4,
       siteUrl:'https://jeremiaslandry.github.io/Punto-Italia-2/'
     },
     {
       title: "Landsy",
-      description: "Landing Page for development services (HTML, CSS, JavaScript, Bootstrap, JQuery)",
+      description: "Landing Page for development services (JS, Bootstrap, JQuery)",
       imgUrl: projImg5,
       siteUrl:'https://landsy.vercel.app'
     },
     {
       title: "Guess this game",
-      description: "GUESS THE GAME BY LOOKING PICTURES OF IT (HTML, CSS, JavaScript, React, Styled Components)",
+      description: "GUESS THE GAME BY LOOKING PICTURES OF IT (JavaScript, ReactJS, Styled Components)",
       imgUrl: projImg6,
       siteUrl:'https://guessthisgame.vercel.app'
     }
