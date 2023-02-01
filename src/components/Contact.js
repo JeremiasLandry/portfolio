@@ -5,7 +5,8 @@ import { collection, addDoc, Timestamp} from 'firebase/firestore';
 import navIcon1 from '../assets/img/nav-icon1.svg'
 import navIcon4 from '../assets/img/github.svg'
 import twitter from '../assets/img/twitter.svg'
-
+import SpacemanGif from './LottieCoder';
+import hacker from '../hacker.json';
 
 const Contact = () => {
   const formInitialDetails = {
@@ -109,9 +110,15 @@ const Contact = () => {
   return (
     <section className='contact' id='connect'> {/*the ID attribute is to identify the differents sections of the web, so the navbar can use it to travel fast to it.*/}
         <Container>
-            <h2 style={{textAlign: 'center'}}>Contact me</h2>
+            <div className='flex-direction align-items-center justify-content-center paddingBottom'>
+              <h2 style={{textAlign: 'center'}}>Contact me</h2>
+              <p>If you want to hire me or work with me contact me here.</p>
+            </div>
             <Row className='align-items-center justify-content-center align-content-center'>
-                <Col md={12}>
+                <Col xs={12} md={6} xl={5}>
+                  <SpacemanGif animationData={hacker}/>
+                </Col>
+                <Col md={6}>
                     <form onSubmit={handleSubmit}>
                         <Row>
                             <Col sm={6} className='px-3'>

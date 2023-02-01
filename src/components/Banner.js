@@ -5,6 +5,7 @@ import pfp from '../assets/img/pfp.png';
 import FileSaver from 'file-saver';
 import cv from '../resources/JeremiasLandryCV_2023.pdf';
 import SpacemanGif from './LottieCoder';
+import spaceman from '../spaceman.json'
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0); //index of loop that iterates the words
@@ -66,7 +67,7 @@ const Banner = () => {
                     <button onClick={() => saveFile()}>Download CV<ArrowRightCircle size={25}/></button>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
-                    <SpacemanGif/>
+                    <SpacemanGif animationData={spaceman}/>
                 </Col>
             </Row>
         </Container>
