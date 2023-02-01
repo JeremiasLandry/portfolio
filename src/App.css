@@ -406,7 +406,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media screen and (max-width:768px){
   .banner{
     min-height:600px;
-    padding-top: 150px;
+    padding-top: 170px;
     margin-bottom:0;
     padding-bottom:50px;
   }
@@ -672,7 +672,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 @media screen and (max-width:500px) {
   .paddingBottom{
-    padding-bottom: 50px;
+    padding-bottom: 20px !important;
+  }
+  .paddingBottom p{
+    margin: 0 30px;
+  }
+  .project{
+    padding-bottom: 0px !important;
   }
 }
 .contact form input, .contact form textarea {
