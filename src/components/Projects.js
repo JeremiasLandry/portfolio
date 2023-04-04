@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import projImg1 from "../assets/img/punchline-card.jpg";
 import projImg2 from "../assets/img/chardle-card.jpg";
-import projImg3 from "../assets/img/g4gcard.jpg";
+import projImg3 from "../assets/img/bairescard.jpg";
 import projImg4 from '../assets/img/puntoitaliacard.jpg';
 import projImg5 from '../assets/img/landsycard.jpg';
 import projImg6 from '../assets/img/gtg-card.jpg'
@@ -26,10 +26,10 @@ const Projects = () => {
       siteUrl:'https://chardle.vercel.app'
     },
     {
-      title: "g4g games",
-      description: "E-COMMERCE (Bootstrap, JS, ReactJS, Firebase)",
+      title: "Baires",
+      description: "Restaurant Landing (JS, SASS, Bootstrap)",
       imgUrl: projImg3,
-      siteUrl:'https://g4g.vercel.app'
+      siteUrl:'https://baires-kappa.vercel.app'
     },
     {
       title: "Punto Italia",
