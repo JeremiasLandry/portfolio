@@ -14,7 +14,13 @@
 	src: url('./assets/font/CentraNo2-Book.ttf');
 	font-weight: 400;
 }
-@font-face {font-family: "PexicoMicro-Regular"; src: url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot"); src: url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff") format("woff"), url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.svg#PexicoMicro-Regular") format("svg"); font-display: swap;}
+@font-face {
+  font-family: "PexicoMicro-Regular";
+  src: url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff2") format("woff2"),
+       url("//db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff") format("woff");
+  font-display: auto;
+}
+
 
 
 /************ Default Css ************/
@@ -39,7 +45,7 @@ body {
   background-repeat: no-repeat;
   color: #fff !important;
   width: 100%;
-  font-family: "PexicoMicro-Regular", 'Centra', sans-serif !important;
+  font-family: "PexicoMicro-Regular", sans-serif !important;
 }
 
 body::-webkit-scrollbar{

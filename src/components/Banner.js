@@ -3,7 +3,7 @@ import { Container, Row, Col} from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import pfp from '../assets/img/pfp.png';
 import FileSaver from 'file-saver';
-import cv from '../resources/JeremiasLandryCV_2023.pdf';
+import cv from '../resources/1532023.pdf';
 import SpacemanGif from './LottieCoder';
 import spaceman from '../spaceman.json'
 
@@ -63,7 +63,7 @@ const Banner = () => {
                     <div className='consoleMessage'>
                         <h1>{`>Hi!, I'm Landry. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
                     </div>
-                    <p>I am a 20-year-old front-end developer from Argentina with a strong focus on critical thinking. Utilizing my expertise in React, I aim to deliver impactful and effective solutions for clients through clean and efficient code.</p>
+                    <p>I'm a 20-year-old front-end developer from Argentina with expertise in React. I specialize in creating clean and efficient code to deliver impactful web solutions for clients. Let's bring your ideas to life with my front-end development skills!</p>
                     <button onClick={() => saveFile()}>Download CV<ArrowRightCircle size={25}/></button>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
