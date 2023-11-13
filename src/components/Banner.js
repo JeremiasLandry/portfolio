@@ -3,7 +3,7 @@ import { Container, Row, Col} from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import pfp from '../assets/img/pfp.png';
 import FileSaver from 'file-saver';
-import cv from '../resources/1532023.pdf';
+import cv from '../resources/31123.pdf';
 import SpacemanGif from './LottieCoder';
 import spaceman from '../spaceman.json'
 
