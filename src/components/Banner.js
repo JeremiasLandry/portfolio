@@ -63,7 +63,7 @@ const Banner = () => {
                     <div className='consoleMessage'>
                         <h1>{`>Hi!, I'm Landry. `}<span className='wrap'>{text}</span><span id='terminalSquare'>.</span></h1>
                     </div>
-                    <p>I'm a 20-year-old front-end developer from Argentina with expertise in React. I specialize in creating clean and efficient code to deliver impactful web solutions for clients. Let's bring your ideas to life with my front-end development skills!</p>
+                    <p>I'm a 22-year-old front-end developer from Argentina with expertise in React. I specialize in creating clean and efficient code to deliver impactful web solutions for clients. Let's bring your ideas to life with my front-end development skills!</p>
                     <button onClick={() => saveFile()}>Download CV<ArrowRightCircle size={25}/></button>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
